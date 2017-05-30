@@ -1,0 +1,7 @@
+#! /bin/bash
+if [[ "$HOSTNAME" = fend* ]]; then
+	squeue -u primdal -O "jobarrayid:19,name:30,partition:12,state:10,timeused:12,timelimit:6"
+else if [ "$HOSTNAME" = "sunray" ]; then
+	qstat -u kasper 
+fi
+fi
