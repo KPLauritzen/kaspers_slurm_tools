@@ -9,6 +9,12 @@ Edit the `USERNAME` variable at the top of the script. Then just run this from t
 ## `watch_myjobs`
 Simply runs `myjobs` every 60 seconds. Also prints the total number of jobs you have running. 
 
+## `squeue_cancel`
+Expects to get piped in a list of jobs from `myjobs`, then cancels them. The smart thing is that you can fit a `grep` pipe inbetween. So you can do
+```
+myjobs | grep bad_jobs | squeue_cancel
+```
+and only cancel the jobs that match `bad_jobs`. 
 ## `request_interactive_compute`
 Starts an interactive session on a compute node Running this with no argument, will request a session on `kemi_gemma3`. Running `request_interactive_compute 1` requests on `kemi_gemma` and running `request_interactive_compute 2` requests on `kemi_gemma2`.
 
