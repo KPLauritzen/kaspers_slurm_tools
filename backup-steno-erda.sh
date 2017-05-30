@@ -3,7 +3,7 @@ SOURCE_DIR=~/lustre
 TARGET_DIR=pulling_steno/lustre
 
 LOGFILE=$HOME/erda-backup.log
-LOCK=/tmp/primdal-backup.lock
+LOCK=/tmp/${USER}-backup.lock
 REMOTE_NAME=io.erda.dk
 echo "$(date): Starting Nightly Backup" >> $LOGFILE
 (
