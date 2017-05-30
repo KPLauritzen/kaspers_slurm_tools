@@ -1,8 +1,0 @@
-#!/bin/bash
-
-partition=${1:-3}
-if [ $partition -eq 1 ]
-then
-	partition=""
-fi
-srun --partition kemi_gemma${partition} --pty bash
