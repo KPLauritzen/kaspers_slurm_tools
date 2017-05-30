@@ -1,0 +1,26 @@
+# Kaspers tools for working on Steno with SLURM
+The stuff I use daily on Steno.
+
+# Usage
+
+## `myjobs`
+Edit the `USERNAME` variable at the top of the script. Then just run this from the commandline to see all the jobs that you currently have submitted to the queue.
+
+## `watch_myjobs`
+Simply runs `myjobs` every 60 seconds. Also prints the total number of jobs you have running. 
+
+## `request_interactive_compute`
+Starts an interactive session on a compute node Running this with no argument, will request a session on `kemi_gemma3`. Running `request_interactive_compute 1` requests on `kemi_gemma` and running `request_interactive_compute 2` requests on `kemi_gemma2`.
+
+## `submit.py`
+The script I use to generate SLURM batch submit files. It is mostly geared towards running other Python scripts, but it could easily be changed to allow other sorts of programs to run. 
+
+You can specify all the parameters you need as arguments to this scripts. For example:
+```
+python submit.py --scriptname='/kemi/primdal/scripts/somescript.py` --jobname test_script --partition kemi_gemma2 --py_args='--somescript_arg --additional_script_arg'
+```
+It is assumed that `$HOME/logs` exists for the output of the scripts. 
+
+## `backup-steno-erda.sh`
+This is run as a cron job nightly. 
+It creates a lockfile when it runs so that only one backup job can run at a time. 
