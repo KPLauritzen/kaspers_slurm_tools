@@ -30,3 +30,6 @@ It is assumed that `$HOME/logs` exists for the output of the scripts.
 ## `backup-steno-erda.sh`
 This is run as a cron job nightly. 
 It creates a lockfile when it runs so that only one backup job can run at a time. 
+
+# Additional stuff
+Save all commands you have ever run, and search through them with my other project: [Eternal history](https://github.com/KPLauritzen/eternalhistory) 
