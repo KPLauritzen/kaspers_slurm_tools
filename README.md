@@ -33,3 +33,5 @@ It creates a lockfile when it runs so that only one backup job can run at a time
 
 # Additional stuff
 Save all commands you have ever run, and search through them with my other project: [Eternal history](https://github.com/KPLauritzen/eternalhistory) 
+
+Check that your submissions are not misusing CPU or memory with [`sfree`](https://github.com/larsbratholm/sfree).
