@@ -1,6 +1,16 @@
 # Kaspers tools for working on Steno with SLURM
 The stuff I use daily on Steno.
 
+# Installation
+Clone this repository and place the scripts in your `$PATH` somewhere. For example:
+``` bash
+cd ~
+mkdir -p ~/bin
+git clone https://github.com/KPLauritzen/kaspers_slurm_tools.git ~/bin
+echo export PATH=~/bin:$PATH >> .bashrc
+source .bashrc
+```
+
 # Usage
 
 ## `myjobs`
