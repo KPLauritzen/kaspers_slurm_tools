@@ -1,6 +1,16 @@
 # Kaspers tools for working on Steno with SLURM
 The stuff I use daily on Steno.
 
+# Installation
+Clone this repository and place the scripts in your `$PATH` somewhere. For example:
+``` bash
+cd ~
+mkdir -p ~/bin
+git clone https://github.com/KPLauritzen/kaspers_slurm_tools.git ~/bin
+echo export PATH=~/bin:$PATH >> .bashrc
+source .bashrc
+```
+
 # Usage
 
 ## `myjobs`
@@ -33,3 +43,5 @@ It creates a lockfile when it runs so that only one backup job can run at a time
 
 # Additional stuff
 Save all commands you have ever run, and search through them with my other project: [Eternal history](https://github.com/KPLauritzen/eternalhistory) 
+
+Check that your submissions are not misusing CPU or memory with [`sfree`](https://github.com/larsbratholm/sfree).
